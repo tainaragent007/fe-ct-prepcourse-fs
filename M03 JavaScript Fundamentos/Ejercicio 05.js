@@ -5,12 +5,18 @@ function esPositivo(num) {
    // La función recibe un entero. Devuelve como resultado un string que indica si el número
    // es positivo o negativo.
    // Si el número es positivo ---> "Es positivo".
-   // Si el número es negativo ---> "Es negativo".
+      // Si el número es negativo ---> "Es negativo".
    // Si el número es 0, devuelve False.
-   // Tu código:
-   return Math.sign(x);
-   if(Math.sign === esPositivo) { return "Es positivo"; } 
-   else { return "Es negativo"; }
+   // Tu código: 
+   if (num === 0 ) { 
+      return false;
+   }
+   else if (num > 0) {
+      return "Es positivo";
+   }
+   else {
+      return "Es negativo";
+   }
 
 }
 
@@ -18,18 +24,23 @@ function agregarSimboloExclamacion(str) {
    // Agrega un símbolo de exclamación al final del string "str" y retórnalo
    // Ejemplo: "hello world" ---> "hello world!"
    // Tu código:
+return console.log(str + '!');
 }
+agregarSimboloExclamacion('str');
 
 function combinarNombres(nombre, apellido) {
    // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
    // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
    // Tu código:
+   var sum = nombre + apellido;
+   return sum;
 }
 
 function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
    // Ejemplo: "Martin" ---> "Hola Martin!"
    // Tu código:
+   console.log('Hola, ${nombre}');
 }
 
 function obtenerAreaRectangulo(alto, ancho) {

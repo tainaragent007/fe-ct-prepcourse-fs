@@ -127,6 +127,16 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 5, retorna "buzz".
    // De lo contrario, retorna el número.
    // Tu código:
+   if (num % 15 === 0 ) {
+      return 'fizzbuzz';
+   }
+   else if ( num % 3 === 0) {
+      return 'fizz';
+   }
+   else if (num % 5 === 0) {
+      return 'buzz';
+   }
+   return num;
 }
 
 function operadoresLogicos(num1, num2, num3) {

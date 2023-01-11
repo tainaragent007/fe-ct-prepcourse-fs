@@ -90,12 +90,25 @@ function esDiezOCinco(num) {
    // Retornar "true" si "num" es 10 o 5.
    // De lo contrario, retornar "false".
    // Tu código:
+   if (num === 10 || num === 5) {
+      return true;
+   }
+   else {
+      return false;
+   }
 }
 
 function estaEnRango(num) {
    // Retornar "true" si "num" es menor que 50 y mayor que 20.
    // De lo contrario, retornar "false".
    // Tu código:
+   // return num < 50 && num > 20;
+   if (num < 50 && num > 20) {
+      return true;
+   }
+   else {
+      return false;
+   }
 }
 
 function esEntero(num) {
@@ -105,6 +118,7 @@ function esEntero(num) {
    // Ejemplo: (-10) ---> true
    // De lo contrario, retorna "false".
    // Tu código:
+   return num % 1 === 0; 
 }
 
 function fizzBuzz(num) {

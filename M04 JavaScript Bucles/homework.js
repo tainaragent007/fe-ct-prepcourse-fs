@@ -205,9 +205,9 @@ function doWhile(num) {
 
    var x = num
    var i = 0;
-   do{
-      i = i++;
-      x = x +5 ;
+   do {
+      i = i + 1;
+      x = x + 5;
    }
    while(i < 8);
    return x;

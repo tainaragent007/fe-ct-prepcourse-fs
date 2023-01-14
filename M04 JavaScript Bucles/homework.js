@@ -139,7 +139,7 @@ function fizzBuzz(num) {
    return num;
 }
 
-function operadoresLogicos(num1, num2, num3) {
+// function operadoresLogicos(num1, num2, num3) {
    // La función recibe tres números distintos.
    // Si num1 es mayor a num2 y a num3, y además es positivo, retornar ---> "Numero 1 es mayor y positivo".
    // Si alguno de los tres números es negativo, retornar ---> "Hay negativos".
@@ -148,17 +148,32 @@ function operadoresLogicos(num1, num2, num3) {
    // Si no se cumple ninguna de las condiciones anteriores, retornar false.
    // Tu código:
 
+//    if(num1 === 0 || num2 === 0 || num3 === 0){
+//       return "Error";} 
+//    else if(num1 < 0 || num2 < 0 || num3 < 0){
+//       return "Hay negativos";} 
+//    else if(num1 > num2 && num1 > num3 && num1 > 0){
+//       return "Número 1 es mayor y positivo";} 
+//    else if(num3 > num1 && num3 > num2){
+//       return num3+1;} 
+//    else {
+//    return false;}
+// }
+function operadoresLogicos(num1, num2, num3) {
    if(num1 === 0 || num2 === 0 || num3 === 0){
-      return "Error";} 
-   else if(num1 < 0 || num2 < 0 || num3 < 0){
-      return "Hay negativos";} 
-   else if(num1 > num2 && num1 > num3 && num1 > 0){
-      return "Número 1 es mayor y positivo";} 
-   else if(num3 > num1 && num3 > num2){
-      return num3+1;} 
-   else {
-      return false;}
-}
+     return "Error"
+   }
+   if(num1<0||num2<0||num3<0){
+     return "Hay negativos"
+   }
+   if(num1 > 0 && num1 > num2 && num1 > num3){
+     return "Numero 1 es mayor y positivo";
+   }
+   if(num3>num1 && num3 > num2){
+     return num3 + 1
+   }
+   return false;
+ }
 
 function esPrimo(num) {
    // Retornar True si "num" es primo.
@@ -169,7 +184,7 @@ function esPrimo(num) {
    // Tu código:
    if (num < 2) return false;
    if (num === 2) return true;
-   for (var i = 2; i < 2; i++) {
+   for (var i = 2; i < num; i++) {
       if (num % i === 0) {
          return false;
       }

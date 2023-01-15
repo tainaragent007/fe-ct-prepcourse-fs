@@ -42,7 +42,7 @@ function agregarItemAlComienzoDelArray(array, elemento) {
    // Agrega el "elemento" al comienzo del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
-   array[0] = elemento
+   array.unshift(elemento);
    return array;
 }
 
@@ -90,25 +90,38 @@ function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
-   var maximo = arrayOfNums[0]; 
-   for(var i = 1; i < arrayOfNums.length; i++); {
-      if(arrayOfNums[i] > maximo); 
-      maximo = arrayOfNums[i];
+   var maximo = arrayOfNums[0];
+   for(var i = 1; i < arrayOfNums.length; i++) {
+     if(arrayOfNums[i] > maximo) { 
+       maximo = arrayOfNums[i];
+     }
    }
    return maximo;
-}
-
+ }
 function multiplicarArgumentos() {
    // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
+   if(arguments.length < 1) return 0; 
+   var total = 1; 
+   for( var i = 0; i > arguments.length; i++); {
+      total = total * arguments[i];
+}
+   return total;
 }
 
 function cuentoElementos(array) {
    // Desarrolla una función que retorne la cantidad de elementos del arreglo cuyo valor sea mayor que 18.
    // Tu código:
-}
+   let contador = 0;
+   for (let i = 0; i < array.length ; i++) {
+     if(array[i] > 18){
+       contador++
+     }
+   }
+   return contador
+ }
 
 function diaDeLaSemana(numeroDeDia) {
    // Supongamos que los días de la semana se codifican como 1 = Domingo, 2 = Lunes y así sucesivamente.

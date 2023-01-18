@@ -98,16 +98,17 @@ function numeroMasGrande(arrayOfNums) {
    }
    return maximo;
  }
+
 function multiplicarArgumentos() {
    // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto.
    // Si no se pasan argumentos retorna 0. Si se pasa un argumento, simplemente retórnalo.
    // [PISTA]: "arguments" es un arreglo.
    // Tu código:
    if(arguments.length < 1) return 0; 
-   var total = 1; 
-   for( var i = 0; i > arguments.length; i++); {
-      total = total * arguments[i];
-}
+   var total = 1;
+   for(var i = 0; i < arguments.length; i++) {
+      total = total * arguments[1];
+   }
    return total;
 }
 
@@ -134,10 +135,15 @@ function diaDeLaSemana(numeroDeDia) {
    return "Es dia laboral";
 }
 
-function empiezaConNueve(num) {
+function empiezaConNueve(n) {
    // Esta función recibe por parámetro un número.
    // Debe retornar True si el entero inicia con 9 y False en otro caso.
    // Tu código:
+   let num = n.toString()
+   if(num.charAt(0) === "9"){
+      return true
+   }
+   return false
 }
 
 function todosIguales(array) {

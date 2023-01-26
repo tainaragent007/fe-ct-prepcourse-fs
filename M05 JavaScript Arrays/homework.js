@@ -185,7 +185,7 @@ function mesesDelAño(array) {
    // Si alguno de los meses no está, retornar el string: "No se encontraron los meses pedidos".
    // Tu código:
    var nuevoArray = [];
-   for( i = 0; i < array.length; i++) {
+   for(let i = 0; i < array.length; i++) {
       if(array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre')
          nuevoArray.push(array[i]);
       }
@@ -201,12 +201,22 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
+   for(i = 0;i<=60;i++) {
+      
+   }
 }
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
    // Recorrerlo y retornar un arreglo con todos los valores mayores a 100 (no incluye el 100).
    // Tu código:
+   var nuevoArray = [];
+   for(let i = 0; i < array.length; i++) {
+      if(array[i] > 100) {
+         nuevoArray.push(array[i]);
+      }
+   }
+   return nuevoArray;
 }
 
 /* ----------------------------------------------------------------------------------

@@ -23,26 +23,46 @@ function incrementarPorUno(array) {
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
    //1, 2, 3, 4
+   // array = [1, 2, 3]
+   // nuevoarray = [2, 3, 4]
+
    let nuevoArray = [];
    for ( i = 0; i < array.length; i++) {
       nuevoArray.push(array[i] + 1);
    }
    return nuevoArray;
 }
+// tambien se puede hacer asi
+// var nuevoArray = []
+// for ( i = 0; i < array.length; i++) {
+//    nuevoArray[i] = array[i] + 1
+// }
+// return nuevoArray;
+
+// hacer lo mismo sin crear una nueva variable 
+// tambien se puede hacer asi
+//
+// for ( i = 0; i < array.length; i++) {
+//    array[i] = array[i] + 1
+// }
+// return array;
 
 function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
    array[array.length] = elemento
+   // array.push(elemento);
    return array;
 }
+
 
 function agregarItemAlComienzoDelArray(array, elemento) {
    // Agrega el "elemento" al comienzo del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
    array.unshift(elemento);
+   // array[0] = elemento
    return array;
 }
 
@@ -65,7 +85,8 @@ function arrayContiene(array, elemento) {
       }
    }
    return false;  
-
+   // la forma mas facil de hacer, usar el .join(" ")
+   // return palabras.join(" ");
 }
 
 function agregarNumeros(arrayOfNums) {
@@ -150,6 +171,12 @@ function todosIguales(array) {
    // Si todos los elementos del arreglo son iguales, retornar True.
    // Caso contrario retornar False.
    // Tu código:
+   for(var i = 0; i < array.length - 1; i++) {
+      if(array[i] !== array[i+1]) {
+         return false        
+      }
+   }
+   return true
 }
 
 function mesesDelAño(array) {

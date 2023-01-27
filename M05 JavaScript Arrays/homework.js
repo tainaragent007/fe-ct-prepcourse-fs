@@ -186,10 +186,11 @@ function mesesDelAño(array) {
    // Tu código:
    var nuevoArray = [];
    for(let i = 0; i < array.length; i++) {
-      if(array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre')
+      if(array[i] === 'Enero' || array[i] === 'Marzo' || array[i] === 'Noviembre') {
          nuevoArray.push(array[i]);
       }
-   if(nuevoArray < 3) {
+   }
+   if(nuevoArray.length < 3) {
       return "No se encontraron los meses pedidos"; 
    }
    else {
@@ -201,10 +202,13 @@ function tablaDelSeis() {
    // Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
    // La función devuelve un arreglo con los resultados de la tabla de multiplicar del 6 en orden creciente.
    // Tu código:
-   for(i = 0;i<=60;i++) {
-      
-   }
+   var tabla =[]
+   for(let i = 0; i < 11;i++) {
+      tabla.push(6*i);
+      }
+   return tabla;
 }
+// console.log(tablaDelSeis(6)); 
 
 function mayorACien(array) {
    // La función recibe un arreglo con enteros entre 0 y 200.
@@ -230,6 +234,21 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   var array = [];
+   var sum = num;
+   for(var i = 0; i < 10; i++) {
+   sum = sum + 2; 
+   if(sum === i) break;
+   else {
+      array.push(sum);
+      }
+   }
+   if(i < 10) {
+      return "Se interrumpió la ejecución"; 
+   }
+   else {
+      return array;
+   }
 }
 
 function continueStatement(num) {
@@ -239,6 +258,16 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   var arr = [];
+   var sum = num;
+   for(let i = 0; i < 10; i++) {
+   if(5 === i) continue;
+   else {
+      sum = sum + 2;
+      arr.push(sum);
+      }
+   }
+      return arr;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

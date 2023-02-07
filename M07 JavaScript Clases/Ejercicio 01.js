@@ -40,10 +40,11 @@ function agregarStringInvertida() {
    // El método debe llamarse "reverse".
    // [PISTA]: necesitarás utilizar el objeto "this".
    String.prototype.reverse = function() {
-      var array = this.split("");
-      var invertido = array.reverse();
-      var final = invertido.join("");
-      return final;
+      // var array = this.split(""); 
+      // var invertido = array.reverse();
+      // var final = invertido.join("");
+      // return final; 
+      return this.split("").reverse().join("");
    };
 }
 

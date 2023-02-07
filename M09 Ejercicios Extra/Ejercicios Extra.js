@@ -204,6 +204,7 @@ function buscoInterseccion(array1, array2) {
    // Si no tienen elementos en común, retornar un arreglo vacío.
    // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
    // Tu código:
+   // OPCION 1
    var newArr = [];
 
    for(let i = 0; i < array1.length; i++){
@@ -215,6 +216,20 @@ function buscoInterseccion(array1, array2) {
    }
 
 return newArr;
+// OPCION 2:
+// var newArr = [];
+
+// for(let i = 0; i < array1.length; i++){
+//   if(array2.includes(array1[i])){
+//     newArr.push(array1[i])
+//   }
+// }
+// return newArr;
+
+// OPCION 3: 
+// var newArr = array1.filter(coinside => array2.indexOf(coinside) !== -1)
+// return newArr;
+
 }
 buscoInterseccion([4,2,3], [1,3,4])
 
